@@ -1,0 +1,51 @@
+@import "_media"
+@import header
+@import animation
+@import main
+@import footer
+
+
+@font-face
+  font-family: "Product Sans"
+  src: url("../fonts/Product-Sans.ttf")
+  font-weight: normal
+  font-style: normal
+
+html
+    padding: 0
+    margin: 0
+
+body
+  height: auto
+  position: relative
+  -webkit-overflow-scrolling: touch
+  font-size: 14px
+  font-family: "Product Sans"
+  background-color: #ffffff
+  font-weight: normal
+  margin: 0
+  padding: 0
+  z-index: 2
+  &::before, &::after
+    box-sizing: border-box
+a
+  cursor: pointer
+p
+  margin: 0
+.overflow-visible
+  overflow: visible !important
+
+.pull-right
+  float: right
+.pull-left
+  float: left
+.vertical-align
+  vertical-align: middle
+.center
+  text-align: center
+
+
+.clearfix
+    clear: both
+    content: ""
+    display: block

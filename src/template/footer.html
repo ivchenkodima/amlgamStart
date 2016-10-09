@@ -1,0 +1,20 @@
+<section class="footer clearfix" ng-controller="EmailController">
+    <div class="footer__subscribe">
+        <h3>Get latest news!</h3>
+        <form ng-submit="addUser()" onsubmit="this.reset()">
+            <div class="email">
+                <a name="email"></a>
+                <input placeholder="Your e-mail" type="email" name="email" ng-model="user"/>
+                <button type="submit">SEND</button>
+            </div>
+        </form>
+    </div>
+</section>
+<section class="socials">
+    <ul>
+        <li><a href="https://twitter.com/amlgamapp" target="_blank">Twitter</a></li>
+        <li><a href="https://www.facebook.com/Amlgam-765525106911842" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/amlgamapp/" target="_blank">Instagram</a></li>
+        <li><a href="https://spark.ru/startup/amlgam" target="_blank">Spark</a></li>
+    </ul>
+</section>

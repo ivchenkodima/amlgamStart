@@ -1,0 +1,109 @@
+.main
+  max-width: 870px
+  margin: 0 auto
+  vertical-align: middle
+  z-index: 2
+  padding-bottom: 20px
+  +max-screen(710)
+    position: relative
+    min-height: 693px
+
+.main__nav
+  padding-top: 264px
+  float: left
+  max-width: 352px
+  display: block
+  list-style-type: none
+  height: 100%
+  padding-left: 40px
+  font-family: "Product Sans"
+  +max-screen(710)
+    float: none
+    margin: 0 auto
+    padding-top: 20px
+    text-align: center
+    padding-left: 20px
+  ul
+    font-family: "Product Sans"
+    font-weight: 100
+    margin: 0
+    font-size: 12px
+    padding-left: 0
+    +max-screen(400)
+      padding-left: 0
+  li
+    &:first-child
+      padding-left: 0
+    font-family: "Product Sans"
+    font-weight: 100
+    display: inline-block
+    list-style-type: none
+    padding: 0 15px
+    opacity: 0.7
+    text-transform: uppercase
+    letter-spacing: 1.5px
+    +max-screen(500)
+      padding: 0 10px
+    a
+      font-family: "Product Sans"
+      font-weight: 100
+      text-decoration: none
+      color: #847f67
+      opacity: .75
+      &.active
+        color: #ffdd4e
+        opacity: 1
+        //text-shadow: 0px  0px  1px #ffdd4e
+blockquote
+  max-width: 340px
+  line-height: 25px
+  font-size: 16px
+  font-family: "Product Sans"
+  font-weight: 100
+  color: #444554
+  margin: 55px 10px 10px 0
+  +max-screen(710)
+    margin: 20px auto
+    text-align: center
+
+.main__container
+  float: right
+  position: relative
+  z-index: 2
+  margin: 78px auto
+  overflow: hidden
+  +max-screen(900)
+    margin-right: 40px
+  +max-screen(710)
+    padding: 0
+    float: none
+    display: block
+    margin: 20px auto
+    text-align: center
+    left: 50%
+    margin-left: -140px
+    position: absolute
+.phone
+  height: 540px
+  overflow: hidden
+  +min-screen(710)
+    height: 648px
+  &__wrap
+    width: auto
+
+.phone__content
+  position: absolute
+  top: 63px
+  left: 19px
+  +min-screen(710)
+    top: 75px
+    left: 23px
+  +max-screen(710)
+    padding: 0
+    left: 50%
+    margin-left: -117px
+  img
+    height: 416px
+    margin-top: 0
+    +min-screen(710)
+      height: 499.2px

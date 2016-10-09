@@ -1,0 +1,15 @@
+{
+  "name": "myapp",
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "4.1.1"
+  },
+  "scripts": {
+    "preinstall": "npm install express",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}

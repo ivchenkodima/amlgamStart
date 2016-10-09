@@ -1,0 +1,74 @@
+.header
+  width: 100%
+  display: block
+  padding: 0
+  margin: 0
+  &__top
+    font-family: "Product Sans"
+    height: 38px
+    background-color: #f4f4f4
+    color: #afac9c
+    text-transform: uppercase
+    text-align: center
+    vertical-align: middle
+    font-weight: 100
+    //text-shadow: 0px  0px  1px #ffdd4e
+    font-size: 9px
+    line-height: 38px
+    letter-spacing: 1.5px
+    span
+      font-weight: 100
+  &__container
+     border-bottom: 1px solid #ebeae6
+  &__content
+    margin: 0 auto
+    max-width: 1190px
+    height: 75px
+    text-align: center
+  &__logo
+    display: inline-block
+    margin-left: 110px
+    text-indent: -9999px
+    text-align: center
+    .main-logo
+      width: 50px
+      height: 50px
+      background: url(../img/logo.svg)
+      background-size: 50px 50px
+      margin-top: 13px
+      margin-bottom: 13px
+  &__contact
+    font-family: "Product Sans"
+    font-weight: 100
+    position: relative
+    float: right
+    width: 110px
+    line-height: 75px
+    vertical-align: middle
+    text-align: center
+    letter-spacing: 1.5px
+    font-size: 11px
+    //text-shadow: 0px  0px  1px #ffdd4e
+    text-transform: uppercase
+
+    a
+      color: #444554
+      text-decoration: none
+    p
+      margin: 0
+    &:hover
+      .line
+        position: absolute
+        bottom: 0
+        width: 110px
+        background-color: #ffdd4e
+        animation-name: contact
+        animation-duration: .3s
+        animation-fill-mode: forwards
+
+@keyframes contact
+  from
+    height: 0
+  to
+    height: 3px
+

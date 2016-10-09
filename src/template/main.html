@@ -1,0 +1,28 @@
+<section class='main' ng-controller="TabController">
+    <div class="main__wraper">
+        <div class="main__nav">
+            <ul>
+                <li ng-repeat="slide in phoneScreens">
+                    <a href="#"
+                       ng-class="{'active':isCurrentSlideIndex($index)}"
+                       ng-click="setCurrentSlideIndex($index);">{{slide.title}}</a></li>
+            </ul>
+            <blockquote  ng-repeat="slide in phoneScreens"
+                ng-hide="!isCurrentSlideIndex($index)"
+                >{{slide.description}}</blockquote>
+
+        </div>
+
+        <div class="main__container" >
+            <img class="phone" src="img/phone5.png" alt="">
+            <div class="phone__content">
+                <img ng-repeat="slide in phoneScreens"
+                     class="slide slider slide-animation nonDraggableImage"
+                     ng-hide="!isCurrentSlideIndex($index)"
+                     ng-src="{{slide.img}}">
+            </div>
+        </div>
+
+    </div>
+
+</section>
