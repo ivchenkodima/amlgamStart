@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <link lang="ru">
+    <meta charset="UTF-8">
+    <title>Amlgam Messenger Aggregator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no'>
+    <link type='image/x-icon' href='img/favicon.png?v=2' rel='Shortcut Icon'>
+    <link rel='stylesheet' href='css/style.css' type='text/css'/>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+
+<!-- Mixpanel -->
+    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+    mixpanel.init("146be3a255454112aef66ffc90237de9");</script>
+<!-- end Mixpanel -->
+
+</head>
+
+<body >
+<section class="header">
+    <div class="header__top">
+        <p>update:
+            <span> we are launching mvp now</span>
+        </p>
+    </div>
+    <div class="header__container">
+        <div class="header__content">
+            <div class="header__logo">
+                <div class="main-logo"></div>
+            </div>
+            <div class="header__contact">
+                <p>
+                    <a href="mailto:juliano@amlgam.com">contact</a>
+                </p>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class='main' ng-controller="TabController">
+    <div class="main__wraper">
+        <div class="main__nav">
+            <ul>
+                <li ng-repeat="slide in phoneScreens">
+                    <a href="#"
+                       ng-class="{'active':isCurrentSlideIndex($index)}"
+                       ng-click="setCurrentSlideIndex($index);">{{slide.title}}</a></li>
+            </ul>
+            <blockquote  ng-repeat="slide in phoneScreens"
+                ng-hide="!isCurrentSlideIndex($index)"
+                >{{slide.description}}</blockquote>
+
+        </div>
+
+        <div class="main__container" >
+            <img class="phone" src="img/phone5.png" alt="">
+            <div class="phone__content">
+                <img ng-repeat="slide in phoneScreens"
+                     class="slide slider slide-animation nonDraggableImage"
+                     ng-hide="!isCurrentSlideIndex($index)"
+                     ng-src="{{slide.img}}">
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="footer clearfix" ng-controller="EmailController">
+    <div class="footer__subscribe">
+        <h3>Get latest news!</h3>
+        <form ng-submit="addUser()" onsubmit="this.reset()">
+            <div class="email">
+                <a name="email"></a>
+                <input placeholder="Your e-mail" type="email" name="email" ng-model="user"/>
+                <button type="submit">SEND</button>
+            </div>
+        </form>
+    </div>
+</section>
+<section class="socials">
+    <ul>
+        <li><a href="https://twitter.com/amlgamapp" target="_blank">Twitter</a></li>
+        <li><a href="https://www.facebook.com/Amlgam-765525106911842" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/amlgamapp/" target="_blank">Instagram</a></li>
+        <li><a href="https://spark.ru/startup/amlgam" target="_blank">Spark</a></li>
+    </ul>
+</section>
+</body>
+</html>
