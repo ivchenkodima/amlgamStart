@@ -1,7 +1,12 @@
 {
-  "name": "amlgamStart",
+  "name": "mastercard.web",
   "scripts": {},
-  "env": {},
+  "env": {
+    "PREBUILD": {
+      "description": "RUN postinstall script",
+      "value": "true"
+    }
+  },
   "formation": {
     "web": {
       "quantity": 1
