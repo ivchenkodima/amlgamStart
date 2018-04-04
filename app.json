@@ -1,17 +1,18 @@
 {
-  "name": "amlgamStart",
-  "scripts": {
-  },
+  "name": "mastercard.web",
+  "scripts": {},
   "env": {
+    "PREBUILD": {
+      "description": "RUN preinstall script",
+      "value": "true"
+    }
   },
   "formation": {
     "web": {
       "quantity": 1
     }
   },
-  "addons": [
-
-  ],
+  "addons": [],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
