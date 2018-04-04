@@ -3,7 +3,7 @@
   "description": "a really cool app",
   "version": "1.0.0",
   "engines": {
-    "node": "4.1.1"
+    "node": "8.9.4"
   },
   "scripts": {
     "preinstall": "npm install express",
