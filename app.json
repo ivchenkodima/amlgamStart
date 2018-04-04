@@ -2,6 +2,8 @@
   "name": "amlgamStart",
   "scripts": {},
   "env": {},
+  "scripts": {
+  },
   "formation": {
     "web": {
       "quantity": 1
